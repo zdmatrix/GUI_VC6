@@ -1,0 +1,268 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON    DISCARDABLE     "Win32SDK.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "退出(&X)",                    IDM_FILE_EXIT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                  IDM_VIEW_TOOL_BAR
+        MENUITEM "状态栏(&S)",                  IDM_VIEW_STATUS_BAR
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 Win32SDK(&A)...",        IDM_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG DIALOG DISCARDABLE  0, 0, 421, 315
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 12, "新宋体"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",0x0,7,28,407,280
+    COMBOBOX        IDC_COMBO_RUNDEV,7,7,129,30,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_PAGE1 DIALOG DISCARDABLE  0, 0, 297, 199
+STYLE WS_CHILD
+FONT 12, "新宋体"
+BEGIN
+    PUSHBUTTON      "产生公私钥",IDC_BUTTON_MAKEEDCH,231,35,50,14
+    LTEXT           "第一步：产生公私钥，私钥卡内保留，公钥输出显示到下框。",
+                    IDC_STATIC,7,38,219,14
+    LTEXT           "基于公私钥/证书安全算法的演示",IDC_STATIC,7,7,283,22
+    EDITTEXT        IDC_EDIT_EDCH,7,55,283,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_SIGNINPUT,108,95,182,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SIGNOUTPUT,7,131,283,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "在这里输入要签名的数据",IDC_STATIC,7,96,99,14
+    PUSHBUTTON      "数据签名",IDC_BUTTON_MAKESIGN,233,114,50,14
+    LTEXT           "第二步：对输入数据使用卡内私钥做签名，签名结果如下。",
+                    IDC_STATIC,7,116,220,14
+END
+
+IDD_DIALOG_PAGE2 DIALOG DISCARDABLE  0, 0, 297, 201
+STYLE WS_CHILD
+FONT 12, "新宋体"
+BEGIN
+    PUSHBUTTON      "加100元",IDC_BUTTON_ADDHUNDRED,14,48,40,14
+    LTEXT           "本演示利用可视卡中的屏幕实现电子现金功能。",IDC_STATIC,
+                    7,7,283,11
+    EDITTEXT        IDC_EDIT_BALANCE,231,37,44,14,ES_CENTER | ES_READONLY
+    PUSHBUTTON      "加1000元",IDC_BUTTON_ADDTHOUSAND,60,48,40,14
+    LTEXT           "第一步：向卡充值，可视卡屏幕会显示本次充值金额。",
+                    IDC_STATIC,13,36,204,8
+    LTEXT           "第二步：按下可视卡下方的按键后会显示出卡内余额。",
+                    IDC_STATIC,14,71,203,12
+    PUSHBUTTON      "地铁刷2元",IDC_BUTTON_SUB2,15,103,40,14
+    PUSHBUTTON      "加油刷200元",IDC_BUTTON_SUB200,61,103,47,14
+    LTEXT           "第三步：点击消费按钮后可视卡会显示本次消费金额。",
+                    IDC_STATIC,13,89,204,8
+    LTEXT           "第四步：按下可视卡下方的按键后会显示卡内余额。",
+                    IDC_STATIC,14,128,192,12
+    PUSHBUTTON      "购物刷868元",IDC_BUTTON_SUB868,117,102,47,14
+    GROUPBOX        "卡内余额",IDC_STATIC,225,22,57,135
+    GROUPBOX        "演示步骤",IDC_STATIC,7,22,213,135
+END
+
+IDD_DIALOG_PAGE3 DIALOG DISCARDABLE  0, 0, 299, 259
+STYLE WS_CHILD
+FONT 12, "新宋体"
+BEGIN
+    LTEXT           "10位用户帐号:",IDC_STATIC,17,48,58,14
+    LTEXT           "本演示为一个转账交易的示例，利用可视卡上的屏幕和按钮实现二代UKey功能，防止网银交易数据在网页或传输到Ukey过程中被篡改。",
+                    IDC_STATIC,7,7,292,19
+    EDITTEXT        IDC_EDIT_2UKEY_1,78,47,122,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "10位目的帐号:",IDC_STATIC,16,66,59,14
+    EDITTEXT        IDC_EDIT_2UKEY_2,78,64,122,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "交易数据提交给UKey",IDC_BUTTON_2UKEY_2CARD,99,99,82,14
+    LTEXT           "第三步：用户确认交易数据安全无误后，按可视卡上的按钮完成转账。",
+                    IDC_STATIC,13,239,195,17
+    LTEXT           "转账金额:",IDC_STATIC,16,84,56,14
+    LTEXT           "第一步:输入转账交易的关键数据",IDC_STATIC,11,37,159,8
+    LTEXT           "第二步：用户转账交易的数据传输到卡上后，卡中会生成验证图片和一次性验证码，并显示到网银页面上。\n       用户现在请确认上面图片中的交易信息是否和输入的相同。然后请确认上面的图片中的校验码与可视卡屏幕上的校验码是否相同。如果以上信息全部相同，则可确认交易数据安全。",
+                    IDC_STATIC,10,121,195,50
+    EDITTEXT        IDC_EDIT_2UKEY_3,78,81,122,14,ES_AUTOHSCROLL | ES_NUMBER
+    GROUPBOX        "演示步骤",IDC_STATIC,7,27,204,232
+    EDITTEXT        IDC_EDIT_UKEY_BALANCE,227,42,44,14,ES_CENTER | 
+                    ES_READONLY
+    GROUPBOX        "帐号余额",IDC_STATIC,221,27,57,232
+END
+
+IDD_DIALOG_PAGE4 DIALOG DISCARDABLE  0, 0, 297, 191
+STYLE WS_CHILD
+FONT 12, "新宋体"
+BEGIN
+    LTEXT           "账户：",IDC_STATIC,7,39,33,14
+    LTEXT           "OTP演示：提供登陆密码，避免帐号被盗",IDC_STATIC,7,7,283,
+                    22
+    EDITTEXT        IDC_EDIT1,56,37,40,14,ES_AUTOHSCROLL
+    LTEXT           "登录密码：",IDC_STATIC,7,60,44,14
+    EDITTEXT        IDC_EDIT2,56,58,40,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_PAGE5 DIALOG DISCARDABLE  0, 0, 187, 99
+STYLE WS_CHILD
+FONT 10, "System"
+BEGIN
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 328, 219
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,91,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,118,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 414
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_DIALOG_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_DIALOG_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DIALOG_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_DIALOG_PAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 290
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_DIALOG_PAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 321
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
